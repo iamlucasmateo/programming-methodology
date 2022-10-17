@@ -1,4 +1,4 @@
-package ProgrammingAssigment4;
+package ProgrammingAssignment4;
 
 public class Game {
     private int attempts;
@@ -21,10 +21,8 @@ public class Game {
     public void processChar(char ch) {
         String newWordStatus = "";
         boolean reduceAttempts = true;
-        System.out.println(ch);
         for (int i = 0; i < word.length(); i++) {
             if (word.charAt(i) == ch) {
-                System.out.println("here");
                 newWordStatus += ch;
                 reduceAttempts = false;
             } else {

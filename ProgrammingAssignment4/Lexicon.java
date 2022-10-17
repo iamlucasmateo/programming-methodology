@@ -1,4 +1,4 @@
-package ProgrammingAssigment4;
+package ProgrammingAssignment4;
 
 import java.util.HashMap;
 
