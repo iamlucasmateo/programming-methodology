@@ -9,24 +9,23 @@ import java.util.Scanner;
 public class Reader {
     public static void main(String[] args) {
         String fileName = "example.txt";
-        // String fileName2 = "/home/lucas-mateo/Desktop/CODE/learn/programming-methodology/Lecture15/example.txt";
         File file = new File(fileName);
+        System.out.println(file.canRead());
         System.out.println(file.getAbsolutePath());
         System.out.println(file.exists());
-        FileReader fr = new FileReader(fileName);
-        // BufferedReader rd = new BufferedReader(fr);
-        // printLines(rd);
+        Scanner fileScanner = new Scanner(file);
+        printLines(fileScanner);
+        fileScanner.close();
 
     };
 
-    // private static void printLines(BufferedReader rd) {
-    //     while (true) {
-    //         String line = rd.readLine();
-    //         if (line == null) break;
-    //         System.out.println(line);
-    //     }
-    //     rd.close();
-    // }
+    private static void printLines(Scanner sc) {
+        while (true) {
+            String line = sc.nextLine();
+            if (line == null) break;
+            System.out.println(line);
+        }
+    }
 
     private static BufferedReader getBufferedReaderFromPrompt() {
         BufferedReader rd = null;
