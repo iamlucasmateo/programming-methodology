@@ -3,7 +3,7 @@ package ProgrammingAssignment5;
 import java.util.Scanner;
 
 
-public class Generala {
+public class GeneralaMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Round round = new Round();
