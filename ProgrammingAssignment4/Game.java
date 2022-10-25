@@ -1,9 +1,9 @@
 package ProgrammingAssignment4;
 
 public class Game {
-    private int attempts;
+    public int attempts;
     private String word;
-    private String wordStatus;
+    public String wordStatus;
     
     Game(int attempts, String word) {
         this.attempts = attempts;
@@ -13,8 +13,6 @@ public class Game {
     }
 
     public boolean isOn() {
-        System.out.println(attempts);
-        System.out.println(wordStatus);
         return (attempts > 0) && (wordStatus.indexOf("_") != -1);
     }
 
@@ -38,6 +36,11 @@ public class Game {
     }
 
     private String getInitWordStatus(String word) {
+        /*
+         * The internal representation of a word is give like so:
+         * L______
+         * L_exi__gr___y
+         */
         String wordStatus = Character.toString(word.charAt(0));
         for (int i = 1; i < word.length(); i++) {
             wordStatus += "_";

@@ -8,6 +8,9 @@ public class Hangman {
         String word = getRandomWord();
         Game game = new Game(3, word);
         while (game.isOn()) {
+            System.out.println(game.attempts);
+            String status = UI.getWordRepresentation(game.wordStatus);
+            System.out.println(status);
             char ch = scanner.next().charAt(0);
             game.processChar(ch);
         }
