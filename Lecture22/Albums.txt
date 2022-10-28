@@ -1,2 +1,6 @@
-// parse this
-// [The Album] [The Band] Year
+[Dark Side of the Moon] [Pink Floyd] 1969
+[The Wall] [Pink Floyd] 1972
+[The Beatles] [Rubber Soul] 1962
+[Smashing Pumpkins] [Adore] 1998
+[Red Hot Chili Peppers] [Blood Sugar Sex Magik] 1994
+[Charly Garcia] [Say No More] 2001
