@@ -21,7 +21,7 @@ public class GeneralaMain {
             }
         }
         String selectedGame = inputHandler.getSelectedGame();
-        System.out.println(resultCalculator.getResult(rolledDice, selectedGame));
+        System.out.println("Puntos: " + resultCalculator.getResult(rolledDice, selectedGame));
 
         scanner.close();
     }
