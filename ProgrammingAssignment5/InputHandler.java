@@ -26,9 +26,11 @@ public class InputHandler {
 
     public String getSelectedGame() {
         String response = "NO GAME";
-        while (!ResultCalculator.ALLOWED_RESULTS.contains(response)) {
+        boolean responseIsAppropiate = ResultCalculator.ALLOWED_RESULTS.contains(response);
+        while (!responseIsAppropiate) {
             System.out.println("Select result");
             response = scanner.next();
+            responseIsAppropiate = ResultCalculator.ALLOWED_RESULTS.contains(response);
         }
 
         return response;
@@ -39,10 +41,10 @@ public class InputHandler {
         Integer[] result = {0, 0, 0, 0, 0};
         boolean inputOk = false;
         while (!inputOk) {
-            System.out.println("Select your game");
+            System.out.println("Select the dices you want to keep (0 for the ones you want to rethrow)");
             response = scanner.next();
             if (response.length() != 5) {
-                System.out.println("Response must be 5 characters long");
+                System.out.println("Response must be exctly 5 characters long");
                 continue;
             }
             for (int i = 0; i < 5; i++) {
